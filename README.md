@@ -1,6 +1,6 @@
 # FlashApp
 
-FlashApp 是一个轻量级 AI H5 生成与托管平台原型。
+FlashApp 是一个轻量级 AI H5 生成、托管与分享平台原型。
 
 ## 核心特性
 - **纯净架构**: 单体 Go 后端 + 原生 HTML/JS/CSS 前端，无沉重依赖。
@@ -38,3 +38,28 @@ go run ./src/cmd/flashapp
 
 - **🤖 AI 智能体开发规范**: 请务必参阅 [`GEMINI.md`](GEMINI.md)。该文件包含了所有关于目录结构、代码拆分、UI 布局稳定性以及**文件安全修改**的强制性规则。
 - **📄 产品需求文档 (PRD)**: 详细的产品架构和接口设计请参阅 [`docs/PRD.md`](docs/PRD.md)。
+
+## 项目预览效果
+
+![项目预览效果](assets/1.png)
+
+
+![项目预览效果](assets/2.png)
+
+
+![项目预览效果](assets/3.png)
+
+
+![项目预览效果](assets/4.png)
+
+
+![项目预览效果](assets/5.5.png)
+
+
+![项目预览效果](assets/5.jpg)
+
+
+
+![项目预览效果](assets/6.png)
+
+
