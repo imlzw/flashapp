@@ -2,6 +2,8 @@
 
 FlashApp 是一个轻量级 AI H5 生成、托管与分享平台原型。
 
+![项目预览效果](assets/1.png)
+
 ## 核心特性
 - **纯净架构**: 单体 Go 后端 + 原生 HTML/JS/CSS 前端，无沉重依赖。
 - **核心体验**: 流式 AI 代码生成、实时 iframe 预览、代码自动落盘部署。
@@ -41,8 +43,6 @@ go run ./src/cmd/flashapp
 
 ## 项目预览效果
 
-![项目预览效果](assets/1.png)
-
 
 ![项目预览效果](assets/2.png)
 
@@ -63,3 +63,9 @@ go run ./src/cmd/flashapp
 ![项目预览效果](assets/6.png)
 
 
+## 个人部署网站
+
+部署在个人服务器上，可以玩一下：
+
+[https://flashapp.jweb.cc](https://flashapp.jweb.cc)   
+[https://flashapp.imlzw.cn](https://flashapp.imlzw.cn)
