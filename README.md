@@ -67,5 +67,5 @@ go run ./src/cmd/flashapp
 
 部署在个人服务器上，可以玩一下：
 
-[https://flashapp.jweb.cc](https://flashapp.jweb.cc)   
-[https://flashapp.imlzw.cn](https://flashapp.imlzw.cn)
+[http://flashapp.jweb.cc](http://flashapp.jweb.cc)   
+[http://flashapp.imlzw.cn](http://flashapp.imlzw.cn)
