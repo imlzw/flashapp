@@ -1,0 +1,210 @@
+/* Publish Modal Styles */
+
+.publish-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.publish-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.publish-modal {
+    width: 800px;
+    background: var(--card);
+    border-radius: var(--radius-lg, 24px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 1px solid var(--border);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.publish-overlay.is-active .publish-modal {
+    transform: translateY(0);
+}
+
+.publish-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.publish-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-base);
+    margin: 0px;
+}
+
+.publish-close {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.publish-close:hover {
+    background: var(--bg-hover);
+    color: var(--text-base);
+}
+
+.publish-body {
+    display: flex;
+    padding: 24px;
+    gap: 32px;
+}
+
+.publish-preview-section {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.publish-preview-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.publish-preview-container {
+    --publish-preview-width: 360;
+    --publish-preview-height: 740;
+    width: 100%;
+    aspect-ratio: var(--publish-preview-width) / var(--publish-preview-height);
+    background: var(--surface);
+    border-radius: var(--radius-md, 16px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    display: flex;
+}
+
+.publish-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.publish-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publish-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.publish-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-base);
+}
+
+.publish-input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm, 8px);
+    padding: 12px 16px;
+    color: var(--text-base);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.publish-input:focus {
+    border-color: var(--accent);
+    background: var(--surface);
+}
+
+.publish-textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.publish-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.publish-btn {
+    padding: 10px 24px;
+    border-radius: var(--radius-sm, 8px);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.publish-btn-cancel {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.publish-btn-cancel:hover {
+    background: var(--bg-hover);
+    color: var(--text-base);
+}
+
+.publish-btn-confirm {
+    background: var(--ink);
+    border: none;
+    color: var(--bg);
+}
+
+.publish-btn-confirm:hover {
+    opacity: 0.9;
+}
+
+.publish-btn-confirm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 840px) {
+    .publish-modal {
+        width: 90%;
+    }
+    .publish-body {
+        flex-direction: column;
+        padding: 24px;
+    }
+    .publish-preview-section {
+        flex: none;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}

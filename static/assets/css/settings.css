@@ -1,0 +1,157 @@
+/* 用户设置页面样式 */
+.settings-stage {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 100px 40px 40px; /* Top padding to account for fixed header */
+  overflow-y: auto;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-card {
+  background: var(--console-panel);
+  border: 1px solid var(--console-line);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.settings-title {
+  margin: 0 0 24px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--console-text);
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--console-text-soft);
+}
+
+.settings-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--console-line);
+  border-radius: 12px;
+  background: var(--console-bg);
+  color: var(--console-text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.settings-input:focus {
+  border-color: var(--console-accent);
+  box-shadow: 0 0 0 3px var(--console-accent-soft);
+  background: var(--console-panel);
+}
+
+.settings-input::placeholder {
+  color: var(--console-text-soft);
+  opacity: 0.6;
+}
+
+.settings-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.settings-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-btn:active {
+  transform: scale(0.98);
+}
+
+.settings-btn-primary {
+  background: var(--console-accent);
+  color: #fff;
+}
+
+.settings-btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px var(--console-accent-soft);
+}
+
+.settings-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.settings-message {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  min-height: 20px;
+}
+
+.settings-message.success {
+  color: #10b981; /* Success Green */
+}
+
+.settings-message.error {
+  color: #ef4444; /* Danger Red */
+}
+
+/* Custom Scrollbar for Settings */
+.settings-stage::-webkit-scrollbar {
+  width: 6px;
+}
+.settings-stage::-webkit-scrollbar-track {
+  background: transparent;
+}
+.settings-stage::-webkit-scrollbar-thumb {
+  background: var(--console-line);
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .settings-stage {
+    padding: 80px 20px 20px;
+  }
+  .settings-card {
+    padding: 20px;
+  }
+  .settings-title {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+}
+
